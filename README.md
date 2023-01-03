@@ -2,11 +2,7 @@
 A simple parser to save the SRT data produced by DJI drones (in this case a DJI mini 3 pro) in CSV and JSON files
 
 ## usage
-Using this command the parser will parse the file and will output 3 files:
--<name>.json
--<name>camera.csv
--<name>gps.csv
-
+generic use
 ```
 python3 .\DJI_SRT_parser.py -filename <path-to-file>
 ```
@@ -14,6 +10,13 @@ example
 ```
 python3 .\DJI_SRT_parser.py -filename .\DJI_0023.SRT
 ```
+Using this command the parser will parse the .SRT file and will output 3 files:
+  - name.json
+  - namecamera.csv
+  - namegps.csv
+<br>
+The generated timestamps correspond to the UNIX timestamp of the date and time in the .SRT file for the local timezone in milliseconds.
+
 
 ## TODO
 - add a flag to parse multiple files given a .txt file containing a list of .SRT file paths
